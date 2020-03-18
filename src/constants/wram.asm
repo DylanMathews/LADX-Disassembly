@@ -483,6 +483,7 @@ wEntitiesPrivateState1Table:: ; C2B0
 wEntitiesPrivateState2Table:: ; C2C0
   ds $10
 
+; Is the item a droppable? Or pickable?
 wEntitiesUnknownTableD:: ; C2D0
   ds $10
 
@@ -611,7 +612,8 @@ wEntitiesFlashCountdownTable:: ; C420
   ; When the countdown reaches 0, the flashing stops.
   ds $10
 
-; Is entity initialized?
+; Entity initialization flags?
+; Seems to be a bitfield
 wEntitiesUnknowTableH::  ; C430
   ds $10
 
@@ -1233,7 +1235,7 @@ wDB72: ds 1
 wIsMarinFollowingLink:: ; DB73
   ds 1
 
-; Unlabeled
+; Unlabeled, Marin-related
 wDB74 equ $DB74
   ds 1
 
